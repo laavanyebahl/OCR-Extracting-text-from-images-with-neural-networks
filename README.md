@@ -13,14 +13,14 @@ on. This will help to spot over fitting. Finally, the test data in nist36 test.m
 We train a network from scratch using a single hidden layer with 64 hidden units, and train for at least 30 epochs. We modify the script to plot generate two plots:
 one showing the accuracy on both the training and validation set over the epochs, and the other showing the cross-entropy loss averaged over the data. The x-axis should represent the epoch number, while the y-axis represents the accuracy or loss. We see an accuracy on the validation set of 75%.
 
-Visualizing the confusion matrix for your best model.   
+Visualizing the confusion matrix for your best model.     
 
 ![5](/results/5.png)
 
-We can observe that the top misclassified classes are:   
-O confused with 0, D
-8 confused with B
-I confused with 1   
+We can observe that the top misclassified classes are:     
+O confused with 0, D  
+8 confused with B  
+I confused with 1     
 
 
 
@@ -33,7 +33,7 @@ Steps:
 to classify all pixels as being part of a character or background.  
 2. Find connected groups of character pixels (see skimage.measure.label). Place a bounding box around each connected component.   
 3. Group the letters based on which line of the text they are a part of, and sort each group so that the letters are in the order they appear on the page.   
-4. Take each bounding box one at a time and resize it to 32 × 32, classify it with LeNet5 network, and show the characters in order (inserting spaces when it makes sense).   
+4. Take each bounding box one at a time and resize it to 32 × 32, classify it with LeNet5 network, and show the characters in order (inserting spaces when it makes sense).    
 
 ![1](/results/1.png)
 ![2](/results/2.png)
@@ -46,7 +46,7 @@ to classify all pixels as being part of a character or background.
 ![5](/results/6.png)
 
 We can see that this is much better detection as compared to previous implementation.
-Just some minor confusions are there for 0 and O, S and 5, k and I
+Just some minor confusions are there for 0 and O, S and 5, k and I   
 Addition of constitutional layers helps in extracting features. This architecture learns much more data.
 
 The graphs for training are shown below:
