@@ -50,12 +50,12 @@ the image. We have provided you with 01 list.jpg, 02 letters.jpg, 03 haiku.jpg a
 
 **1)From EMNIST dataset with PyTorch using a convolutional net (LeNet5) **   
 
-![5](/results/5.png)
+![5](/results/6.png)
 
 We can see that this is much better detection as compared to previous implementation.
 Just some minor confusions are there for 0 and O, S and 5, k and I
 Addition of constitutional layers helps in extracting features. This architecture learns much more data.
 
 The graphs for training are shown below:
-![6](/results/6.png)
+![6](/results/7.png)
 
