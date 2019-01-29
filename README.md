@@ -20,27 +20,20 @@ Visualizing the confusion matrix for your best model.
 We can observe that the top misclassified classes are:   
 O confused with 0, D
 8 confused with B
-I confused with 1
+I confused with 1   
 
-Now that you have a network that can recognize handwritten letters with reasonable accuracy, you can now use it to parse text in an image. Given an image with some text on it,
-our goal is to have a function that returns the actual text in the image. However, since your
-neural network expects a a binary image with a single character, you will need to process
-the input image to extract each character. There are various approaches that can be done
-so feel free to use any strategy you like.
-Here we outline one possible method, another is that given in a tutorial
+
+
+Now that we have a network that can recognize handwritten letters with reasonable accuracy, we can now use it to parse text in an image. Given an image with some text on it, our goal is to have a function that returns the actual text in the image. 
+However, since your neural network expects a a binary image with a single character, we will need to process the input image to extract each character. 
+
+Steps:
+
 1. Process the image (blur, threshold, opening morphology, etc. (perhaps in that order))
-to classify all pixels as being part of a character or background.
-2. Find connected groups of character pixels (see skimage.measure.label). Place a bounding box around each connected component.
-3. Group the letters based on which line of the text they are a part of, and sort each
-group so that the letters are in the order they appear on the page.
-4. Take each bounding box one at a time and resize it to 32 × 32, classify it with your
-network, and report the characters in order (inserting spaces when it makes sense).
-Since the network you trained likely does not have perfect accuracy, you can expect there
-to be some errors in your final text parsing. Whichever method you choose to implement
-for the character detection, you should be able to place a box on most of there characters in
-the image. We have provided you with 01 list.jpg, 02 letters.jpg, 03 haiku.jpg and
-04 deep.jpg to test your implementation on.
-6
+to classify all pixels as being part of a character or background.  
+2. Find connected groups of character pixels (see skimage.measure.label). Place a bounding box around each connected component.   
+3. Group the letters based on which line of the text they are a part of, and sort each group so that the letters are in the order they appear on the page.   
+4. Take each bounding box one at a time and resize it to 32 × 32, classify it with LeNet5 network, and show the characters in order (inserting spaces when it makes sense).   
 
 ![1](/results/1.png)
 ![2](/results/2.png)
